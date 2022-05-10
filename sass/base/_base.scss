@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+
+  @media screen and (max-width: 75em) {
+    //1200px
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @media screen and (max-width: 56.25em) {
+    //900px
+    font-size: 50%; // 1rem = 8px
+  }
+
+  @media screen and (max-width: 43.75em) {
+    //700px
+    font-size: 43.75%; //1rem = 7px
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $color-grey-light-1;
+  font-size: 1.6rem;
+  color: $color-grey-dark-3;
+  line-height: 1.5;
+  font-weight: 400;
+}

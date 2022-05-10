@@ -1,0 +1,26 @@
+@keyframes slideToTop {
+  0% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+
+  90% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

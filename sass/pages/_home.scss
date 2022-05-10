@@ -1,0 +1,259 @@
+.presentation {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  z-index: -1;
+
+  display: grid;
+  grid-template-columns: 50% repeat(2, 1fr);
+  grid-column-gap: 4vw;
+  grid-row-gap: 4rem;
+  padding: 18rem 2rem;
+
+  &__left-side {
+    @media screen and (max-width: 45.63em) {
+      grid-column: 1/-1;
+    }
+  }
+
+  @media screen and (max-width: 45.63em) {
+    //730px
+    padding: 12rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 3px;
+
+    @media screen and (max-width: 68.75em) {
+      // 68.75em = 1100px; 1100/16px;
+      height: 65%;
+    }
+
+    @media screen and (max-width: 45.63em) {
+      //730px
+      height: 100%;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.popular-dishes {
+  padding-bottom: 9rem;
+  display: grid;
+}
+
+.popular-dishes__container {
+  display: grid;
+  width: 85%;
+  margin: auto;
+  grid-template-columns: repeat(3, minmax(25rem, 1fr));
+
+  @media screen and (max-width: 56.25em) {
+    //900px
+    grid-template-columns: 1fr;
+    grid-row-gap: 4vw;
+    width: 100%;
+  }
+}
+
+.our-menu {
+  padding: 10rem 5rem 6rem;
+}
+
+.products-container {
+  width: 85%;
+  margin: 8rem auto;
+  display: grid;
+  grid-gap: 1.25vw;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 20vw 27vw;
+
+  @media screen and (max-width: 45.63em) {
+    display: block;
+    width: 60%;
+  }
+
+  @media screen and (max-width: 22.5em) {
+    //360px = 22.5em
+    width: 90%;
+  }
+}
+
+.product {
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 2rem 4rem rgba(#000, 0.1);
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 45.63em) {
+    box-shadow: none;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.06);
+      opacity: 0.6;
+    }
+
+    @media screen and (max-width: 45.63em) {
+      width: 100%;
+      height: 40vw;
+      margin-bottom: 5vw;
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    color: $color-grey-dark-2;
+    text-align: center;
+    letter-spacing: 1.5px;
+    padding: 1.5rem 3rem;
+    background-color: rgba($color-white, 0.8);
+    opacity: 0;
+    transform: translate(-50%, -20%);
+    transition: all 0.6s;
+
+    @media screen and (max-width: 45.63em) {
+      opacity: 1;
+    }
+  }
+
+  &__img:hover + &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &--1 {
+    grid-column: 1/3;
+  }
+
+  &--2 {
+    grid-column: 3 / span 2;
+  }
+
+  &--3 {
+    grid-column: 5/-1;
+  }
+
+  &--4 {
+    grid-column: 1 / span 3;
+  }
+
+  &--5 {
+    grid-column: 4 / span 3;
+  }
+}
+
+.testimonials {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10rem;
+
+  &__container {
+    display: flex;
+
+    @media screen and (max-width: 45.63em) {
+      //730px = 45.63em
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.testimony {
+  border-radius: 3px;
+  padding: 4rem 2rem;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 1rem 3rem rgba(#000, 0.1);
+
+  &:not(:last-child) {
+    margin-right: 5rem;
+    @media screen and (max-width: 45.63em) {
+      //730px = 45.63em
+      margin-right: 0;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__star-icon {
+    font-size: 2.5rem;
+    color: #f7fd04;
+  }
+
+  &__customer-name,
+  &__text {
+    margin-top: 2rem;
+  }
+
+  @media screen and (max-width: 45.63em) {
+    //730px = 45.63em
+    width: 60%;
+  }
+
+  @media screen and (max-width: 22.5em) {
+    //360px = 22.5em
+    width: 90%;
+  }
+}
+
+.login {
+  padding: 10rem;
+
+  @media screen and (max-width: 45.63em) {
+    //730px
+    padding: 3rem;
+  }
+
+  @media screen and (max-width: 22.5em) {
+    //360px
+    padding: 0;
+    padding-top: 3rem;
+  }
+
+  &__container {
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+    height: 45rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $color-grey-light-1;
+    border-radius: 2rem;
+    display: flex;
+
+    @media screen and (max-width: 45.63em) {
+      //730px
+      width: 100%;
+    }
+
+    @media screen and (max-width: 22.5em) {
+      //360px = 22.5em
+      border-radius: 0;
+    }
+  }
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Restaurant</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content">
+        <h3 class="content__logo">Costaldino</h3>
+        <div class="content__search">
+          <input type="text" class="content__input" placeholder="Search ..." />
+          <div class="content__icon-box">
+            <svg class="content__icon">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
+          </div>
+        </div>
+        <nav class="content__nav">
+          <ul class="content__list">
+            <li class="content__item">
+              <a href="#" class="content__link content__link--active" key="home"
+                >Home</a
+              >
+            </li>
+            <li class="content__item content__item--active">
+              <a href="#our-products" class="content__link" key="our-products"
+                >Our products</a
+              >
+            </li>
+            <li class="content__item">
+              <a href="#testimonials" class="content__link" key="testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li class="content__item">
+              <a href="#login" class="content__link" key="login">Login</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="burger">
+          <div class="burger__line burger__line--1"></div>
+          <div class="burger__line burger__line--2"></div>
+          <div class="burger__line burger__line--3"></div>
+        </div>
+      </div>
+
+      <div class="bg__img">
+        <h1 class="heading-primary">Discover our delicious recipes</h1>
+        <a href="#our-products" class="btn btn-green btn-animated"
+          >Explore Menu</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section class="presentation">
+        <div class="presentation__left-side">
+          <h3 class="heading-tertiary mb-medium">
+            Our mission is to make you happy
+          </h3>
+          <p class="paragraph">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero,
+            soluta dolores sunt tempore, unde rerum provident nemo blanditiis
+            corrupti deserunt aperiam quaerat laboriosam voluptate, ipsam
+            consequatur porro
+          </p>
+          <a href="#" class="btn-link">Read more &rarr;</a>
+        </div>
+        <img src="img/meat-1.jpg" alt="meat 1" />
+        <img src="img/meat-2.jpg" alt="meat 2" />
+      </section>
+
+      <section class="popular-dishes">
+        <h2
+          class="heading-secondary heading-secondary--green center-text mb-large"
+        >
+          Popular dishes
+        </h2>
+        <div class="popular-dishes__container">
+          <div class="card">
+            <img src="img/pizza-1.jpg" alt="pizza" class="card__img" />
+            <h3 class="heading-4 center-text">Pizza Bolognese</h3>
+            <div class="card__details">
+              <ul class="card__list">
+                <li class="card__item"><span>&#10004;</span>540 calories</li>
+                <li class="card__item">
+                  <span>&#10004;</span> Ingredients: Tomatoes, salt,
+                  flour,cheese.
+                </li>
+                <li class="card__item">
+                  <span>&#9733;</span> 4.8 rating (184)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="img/menu-hamburger-1.jpg"
+              alt="menu-hamburger "
+              class="card__img"
+            />
+            <h3 class="heading-4 center-text">Menu Hamburger</h3>
+            <div class="card__details">
+              <ul class="card__list">
+                <li class="card__item"><span>&#10004;</span> 610 calories</li>
+                <li class="card__item">
+                  <span>&#10004;</span> Ingredients: Potatoes, salt, beef,
+                  salad, garlic.
+                </li>
+                <li class="card__item">
+                  <span>&#9733;</span> 4.7 rating (154)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/pizza-4.jpg" alt="pizza 3" class="card__img" />
+            <h3 class="heading-4 center-text">Italian Pizza</h3>
+            <div class="card__details">
+              <ul class="card__list">
+                <li class="card__item"><span>&#10004;</span> 510 calories</li>
+                <li class="card__item">
+                  <span>&#10004;</span> Ingredients: Tomatoes, salt, flour,
+                  chicken.
+                </li>
+                <li class="card__item">
+                  <span>&#9733;</span> 4.9 rating (238)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="our-menu" id="our-products">
+        <h2 class="heading-secondary heading-secondary--green center-text">
+          Our products
+        </h2>
+        <div class="products-container">
+          <figure class="product product--1">
+            <img
+              src="img/croissants.jpg"
+              alt="Croissants"
+              class="product__img"
+            />
+            <figcaption class="product__caption">Breakfast</figcaption>
+          </figure>
+
+          <figure class="product product--2">
+            <img src="img/pizza-6.jpg" alt="Pizza" class="product__img" />
+            <figcaption class="product__caption">Pizzas</figcaption>
+          </figure>
+
+          <figure class="product product--3">
+            <img src="img/pasta-3.jpg" alt="Pasta" class="product__img" />
+            <figcaption class="product__caption">Pasta</figcaption>
+          </figure>
+
+          <figure class="product product--4">
+            <img
+              src="img/traditional-dish.jpg"
+              alt="Traditional dish"
+              class="product__img"
+            />
+            <figcaption class="product__caption">Traditional Dishes</figcaption>
+          </figure>
+
+          <figure class="product product--5">
+            <img src="img/burger-7.jpg" alt="Burger" class="product__img" />
+            <figcaption class="product__caption">Hamburgers</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials">
+        <h2
+          class="heading-secondary heading-secondary--green center-text mb-large"
+        >
+          Testimonials
+        </h2>
+        <div class="testimonials__container">
+          <div class="testimony">
+            <img src="img/user-3.jpg" alt="customer" class="testimony__img" />
+            <p class="testimony__customer-name">John Doe</p>
+            <span class="testimony__star-icon"
+              >&#9733; &#9733; &#9733; &#9733; &#9733;</span
+            >
+            <p class="testimony__text">
+              A wonderful restaurant, I highly recommend it.
+            </p>
+          </div>
+          <div class="testimony">
+            <img src="img/user-4.jpg" alt="customer" class="testimony__img" />
+            <p class="testimony__customer-name">Mark wyind</p>
+            <span class="testimony__star-icon"
+              >&#9733; &#9733; &#9733; &#9733; &#9733;</span
+            >
+            <p class="testimony__text">
+              An amazing restaurant, very polite stuff, delicious food with a
+              great price.
+            </p>
+          </div>
+          <div class="testimony">
+            <img src="img/user-6.jpg" alt="customer" class="testimony__img" />
+            <p class="testimony__customer-name">Selena Hardy</p>
+            <span class="testimony__star-icon"
+              >&#9733; &#9733; &#9733; &#9733; &#9733;</span
+            >
+            <p class="testimony__text">
+              High quality of service, the best compromise between quality and
+              price.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="login" id="login">
+        <div class="login__container">
+          <form class="form">
+            <h2 class="heading-secondary heading-secondary--green center-text">
+              Login
+            </h2>
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Name"
+                id="name"
+                required
+              />
+              <label for="name" class="form__label">Name</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="password"
+                class="form__input"
+                placeholder="Password"
+                id="password"
+                required
+                minlength="6"
+              />
+              <label for="password" class="form__label">Password</label>
+            </div>
+            <div class="form__group center-text">
+              <button class="btn btn-green">Connect</button>
+            </div>
+          </form>
+          <div class="img-box">
+            <img src="img/chef.jpg" alt="chef" class="login-img" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__box">
+          <p class="footer__title">Costaldino</p>
+          <div class="footer__icon-box">
+            <svg class="footer__icon">
+              <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+            </svg>
+            <svg class="footer__icon">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+            <svg class="footer__icon">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </div>
+          <p class="footer__text">
+            Copyright &copy; 2022. All rights reserved.
+          </p>
+        </div>
+
+        <div class="footer__box">
+          <p class="footer__title">Contact us</p>
+          <p class="footer__text">546 Hayli mayle New York. USA</p>
+          <div class="footer__contact-info">
+            <p class="footer__phone">+1.124.654.789</p>
+            <p class="footer__email">query@costaldino.com</p>
+          </div>
+        </div>
+
+        <div class="footer__box">
+          <p class="footer__title">Account</p>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Create account</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Sign in</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">IOS app</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Android app</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <p class="footer__title">Company</p>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">About Costaldino</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">For business</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Partners</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Careers</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
